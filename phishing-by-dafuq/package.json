@@ -1,0 +1,17 @@
+{
+  "name": "phishing_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "echo 'Build complete'"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "body-parser": "^1^.20.2",
+    "express": "^2^.18.2"
+  }
+}
